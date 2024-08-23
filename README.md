@@ -1,4 +1,4 @@
-# openai-api-rag
+# RAG powered LLM Bot
 Use Gemini or Minstral AI to build a bot using RAG technique.
 
 LangChain is used to build the entire pipeline and Pinecone is used to store the vector database.
@@ -17,13 +17,13 @@ You need to update __.env__ file with your Pinecone API and HuggingFace Access T
 don't have it, you need to create a free account on both the websites and then create an 
 access token.
 
-Update `PINECONE_API_KEY` and `HUGGINGFACE_API_KEY` in __.env__ file.
+Update `PINECONE_API_KEY` and `HUGGINGFACE_API_KEY` in _.env_ file.
 
 Here, I have used MinstralAI. If you want to use some other LLM that is already available on
-HuggingFace, then replace the `repo_id` variable in __main.py__
+HuggingFace, then replace the `repo_id` variable in _main.py_
 
 ## Step 3: Run
-The __main.py__ is ready to run using the following code
+The _main.py_ is ready to run using the following code
 
 ```bash
 python main.py
