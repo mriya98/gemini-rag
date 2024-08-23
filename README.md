@@ -28,3 +28,8 @@ The _main.py_ is ready to run using the following code
 ```bash
 python main.py
 ```
+
+### TO-DO
+1. Create a web UI frontend
+2. Make it General Purpose IR from doc/pdf uploaded by user
+3. Add functionality to upload and retrieve information from images
