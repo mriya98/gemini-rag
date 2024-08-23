@@ -1,0 +1,6 @@
+langchain==0.2.14
+langchain-community==0.2.12
+pinecone-client==2.2.4
+python-dotenv==1.0.0
+streamlit==1.29.0
+google-generativeai
