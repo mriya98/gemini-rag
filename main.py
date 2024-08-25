@@ -1,8 +1,8 @@
 from dotenv import load_dotenv
 from langchain import PromptTemplate
-from langchain.document_loaders import TextLoader
-from langchain.embeddings import HuggingFaceEmbeddings
-from langchain.llms import HuggingFaceHub
+from langchain_community.document_loaders import TextLoader
+from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_community.llms.huggingface_hub import HuggingFaceHub
 from langchain.schema.runnable import RunnablePassthrough
 from langchain.schema.output_parser import StrOutputParser
 from langchain.text_splitter import CharacterTextSplitter
@@ -75,8 +75,10 @@ class Chatbot():
         | llm
         | StrOutputParser()
     )
-
+    
+'''
 bot = Chatbot()
 input = input("Ask me anything: ")
 result = bot.rag_chain.invoke(input)
 print(result)
+'''
