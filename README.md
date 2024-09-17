@@ -1,10 +1,7 @@
 # RAG powered LLM Bot
-Use Gemini or Minstral AI to build a bot using RAG technique.
+Use Gemini or Mistral AI to build a chatbot using RAG to improve AI response.
 
-LangChain is used to build the entire pipeline and Pinecone is used to store the vector database.
-A file is provided with all relevant information (context_poem.txt in this project) and is
-split, vectorised, and the embeddings are stored in a vector database which is used by the LLM
-to answer user questions.
+LangChain is used to build the pipeline for LLM. The context information is stored in `context.txt`. The information from knowledge document is converted into vectors and stored in [Pinecone](https://www.pinecone.io/) (a vector database). This facilitates accurate response generation by offering a way to identify and fetch relevant information from the vector db quickly. The LLM uses this additional information to formulate the response. The web UI is developed using Streamlit.
 
 ## Step 1: Download dependencies
 To run this file, first download the dependencies
@@ -13,17 +10,14 @@ pip install -r requirements.txt
 ```
 
 ## Step 2: Set up
-You need to update __.env__ file with your Pinecone API and HuggingFace Access Token. If you
-don't have it, you need to create a free account on both the websites and then create an 
-access token.
+You need to update __.env__ file with your [Pinecone API](https://docs.pinecone.io/guides/get-started/quickstart) and [HuggingFace Access Token](https://huggingface.co/settings/tokens). If you don't have one, you need to create a free account on both the websites and then create an API and an access token  respectively.
 
 Update `PINECONE_API_KEY` and `HUGGINGFACE_API_KEY` in _.env_ file.
 
-Here, I have used MinstralAI. If you want to use some other LLM that is already available on
-HuggingFace, then replace the `repo_id` variable in _main.py_
+Here, I have used MistralAI API available on HuggingFace. To use another LLM for your ChatBot, replace the `repo_id` in _main.py_ with that of the desired LLM from [HuggingFace](https://huggingface.co/models).
 
 ## Step 3: Run
-The _main.py_ is ready to run using the following code
+After completing the authentication steps, _main.py_ is ready to run using the following code
 
 ```bash
 python main.py
